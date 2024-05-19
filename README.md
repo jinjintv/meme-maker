@@ -218,3 +218,19 @@ greeting.innerText = username + "님, 안녕하세요.";
 greeting.innerText = `${username}님, 안녕하세요.`;
 ```
 해당 방법을 사용할 때 유의해야할 점은 **반드시 `` 백틱 기호를 사용해야하고, 변수명은 ${변수명} 이렇게 넣어야 함**
+
+#### saving username
+매번 새로고침을 할 때 마다 username을 입력하는건 번거로우니까, 한 번 저장하고 로그인을 하면 username을 저장해보자
+
+*local storage를 활용*
+
+local storage API를 JS에서 활용하여 브라우저에서 사용자가 입력한 값을 저장하고 불러올 수 있음 = mini DB와 같은 역할 ^^
+
+localStorage.setItem / localStorage.getItem / localStorage.removeItem
+
+localStorage.setItem("key", value);
+
+#### loading username
+
+local storage에 저장한 username이 존재할 경우 새로고침을 하여도 form이 뜨지 않고 h1이 바로 뜨도록 지정해주자
+
